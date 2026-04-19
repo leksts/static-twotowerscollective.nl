@@ -29,6 +29,7 @@ main > h1 {
   overflow: hidden;
   border-top: 3px solid #e040fb;
   border-bottom: 3px solid #e040fb;
+  margin-bottom: 30px;
 }
 
 .disconight-banner::before {
