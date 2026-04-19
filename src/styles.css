@@ -19,3 +19,134 @@ main > h1 {
   text-align: center;
   font-size: 3.5em;
 }
+
+/* Disco Night Banner */
+.disconight-banner {
+  background: linear-gradient(135deg, #1a0030 0%, #3d0070 40%, #1a0040 100%);
+  color: #fff;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #e040fb;
+  border-bottom: 3px solid #e040fb;
+  margin-bottom: 30px;
+}
+
+.disconight-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(160, 60, 255, 0.3) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(224, 64, 251, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.disconight-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 30px;
+  position: relative;
+  z-index: 1;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.disconight-disco-icon {
+  font-size: 3.5em;
+  flex-shrink: 0;
+  text-shadow: 0 0 20px #e040fb, 0 0 40px #9c27b0;
+  animation: disco-spin 4s linear infinite;
+}
+
+@keyframes disco-spin {
+  0%   { text-shadow: 0 0 20px #e040fb, 0 0 40px #9c27b0; }
+  25%  { text-shadow: 0 0 20px #ff80ab, 0 0 40px #f06292; }
+  50%  { text-shadow: 0 0 20px #ea80fc, 0 0 40px #ce93d8; }
+  75%  { text-shadow: 0 0 20px #b388ff, 0 0 40px #7c4dff; }
+  100% { text-shadow: 0 0 20px #e040fb, 0 0 40px #9c27b0; }
+}
+
+.disconight-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.disconight-label {
+  font-size: 0.75em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e040fb;
+  margin-bottom: 4px;
+}
+
+.disconight-title {
+  font-size: 1.9em;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 6px;
+  color: #fff;
+  text-shadow: 0 0 10px #e040fb;
+}
+
+.disconight-title span {
+  color: #f48fb1;
+  font-style: italic;
+}
+
+.disconight-details {
+  font-size: 0.92em;
+  color: #e1bee7;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.disconight-details strong {
+  color: #fff;
+}
+
+.disconight-cta {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.disconight-cta a {
+  display: inline-block;
+  background: linear-gradient(135deg, #e040fb, #9c27b0);
+  color: #fff !important;
+  text-decoration: none !important;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: 1px;
+  box-shadow: 0 0 18px rgba(224, 64, 251, 0.6), 0 4px 15px rgba(0,0,0,0.4);
+  transition: box-shadow 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.disconight-cta a:hover {
+  box-shadow: 0 0 30px rgba(224, 64, 251, 0.9), 0 4px 20px rgba(0,0,0,0.5);
+  transform: translateY(-2px);
+}
+
+.disconight-cta .disconight-cta-sub {
+  display: block;
+  font-size: 0.75em;
+  color: #ce93d8;
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .disconight-banner-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 16px;
+  }
+  .disconight-title {
+    font-size: 1.4em;
+  }
+}
